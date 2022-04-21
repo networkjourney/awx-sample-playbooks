@@ -1,9 +1,5 @@
 ---
 - name: Running show commands on Cisco IOS
-  hosts: AUTOMATION-SWITCHES
-  gather_facts: false
-  connection: local
-
   tasks:
     - name: Run multiple commands on Cisco IOS nodes
       ios_command: #ansible module
