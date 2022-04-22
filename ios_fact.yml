@@ -1,5 +1,7 @@
 ---
 - name: Running show commands on Cisco IOS
+  hosts: all
+  gather_facts: true 
   tasks:
     - name: Run multiple commands on Cisco IOS nodes
       ios_command: #ansible module
