@@ -1,0 +1,13 @@
+- name: cisco_sh_ver
+  hosts: all
+  gather_facts: true 
+  tasks:
+  - name: run show version on remote devices
+    cisco.ios.ios_command:
+     commands:
+     - show version       
+  - name: show run on remote devices
+    become: true
+    cisco.ios.ios_command:
+     commands: 
+     - show run
