@@ -5,9 +5,14 @@
    - name: run show version on remote devices
      cisco.ios.ios_command:
        commands:
-         - show version       
+         - show version
+     register: output    #register the output in a variable named output
+   - debug: var=output.stdout_lines   #print the variable at the console line by line
+   
    - name: show run on remote devices
      #become: true
      cisco.ios.ios_command:
        commands: 
          - show run
+     register: output    #register the output in a variable named output
+   - debug: var=output.stdout_lines   #print the variable at the console line by line
