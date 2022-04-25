@@ -17,6 +17,8 @@
      panos_security_rule:
       #provider: '{{ palo_provider }}'
       ip_address: '{{ ansible_host }}'
+      username: "{{ ansible_username }}"
+      password: "{{ ansible_password }}"
       rule_name: 'Ansible test 1'
       description: 'An Ansible test rule'
       source_zone: ['any']
