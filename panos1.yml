@@ -10,7 +10,8 @@
 
   vars:
     palo_provider:
-      api_key: LUFRPT1WblNwQWQ1RmRBdGdMaFgvTDViT3lNLytlM2M9b0FHUmtNbXZzY0VNMTZrU3JHeGpUdEpoRGFjS3dXWVdjbE9uQmMrR3BLQjNkUE9QRWdiTWRkRnB5Z3FuRUt2MQ==
+      username: "admin"
+      password: "Networkjourney@123"
 
   tasks:
    - name: Add test rule 1 to the firewall
