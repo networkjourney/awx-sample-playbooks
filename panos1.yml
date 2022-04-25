@@ -19,6 +19,9 @@
    - name: Add test rule 1 to the firewall
      panos_security_rule:
       provider: '{{ palo_provider }}'
+      username: "admin"
+      password: "Networkjourney@123"
+      api_key: LUFRPT1WblNwQWQ1RmRBdGdMaFgvTDViT3lNLytlM2M9b0FHUmtNbXZzY0VNMTZrU3JHeGpUdEpoRGFjS3dXWVdjbE9uQmMrR3BLQjNkUE9QRWdiTWRkRnB5Z3FuRUt2MQ==
       ip_address: '{{ ansible_host }}'
       rule_name: 'Ansible test 1'
       description: 'An Ansible test rule'
