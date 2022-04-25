@@ -1,22 +1,22 @@
 ---
 
 - name: PANOS_PLAYBOOK
-  hosts: all
-  gather_facts: false
-  connection: local
+#  hosts: all
+#  gather_facts: false
+#  connection: local
 
-  collections:
-    - paloaltonetworks.panos
+#  collections:
+#    - paloaltonetworks.panos
 
-  vars:
-    palo_provider:
-      ip_address: '{{ ansible_host }}'
-      api_key: LUFRPT1WblNwQWQ1RmRBdGdMaFgvTDViT3lNLytlM2M9b0FHUmtNbXZzY0VNMTZrU3JHeGpUdEpoRGFjS3dXWVdjbE9uQmMrR3BLQjNkUE9QRWdiTWRkRnB5Z3FuRUt2MQ==
+  #vars:
+   # palo_provider:
+   #   api_key: LUFRPT1WblNwQWQ1RmRBdGdMaFgvTDViT3lNLytlM2M9b0FHUmtNbXZzY0VNMTZrU3JHeGpUdEpoRGFjS3dXWVdjbE9uQmMrR3BLQjNkUE9QRWdiTWRkRnB5Z3FuRUt2MQ==
 
   tasks:
    - name: Add test rule 1 to the firewall
      panos_security_rule:
       #provider: '{{ palo_provider }}'
+      ip_address: '{{ ansible_host }}'
       rule_name: 'Ansible test 1'
       description: 'An Ansible test rule'
       source_zone: ['OUTSIDE_USERS']
