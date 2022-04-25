@@ -10,7 +10,7 @@
 
   vars:
     palo_provider:
-      ip_address: '172.16.27.118'
+      ip_address: '{{ ansible_host }}'
       api_key: LUFRPT1WblNwQWQ1RmRBdGdMaFgvTDViT3lNLytlM2M9b0FHUmtNbXZzY0VNMTZrU3JHeGpUdEpoRGFjS3dXWVdjbE9uQmMrR3BLQjNkUE9QRWdiTWRkRnB5Z3FuRUt2MQ==
 
   tasks:
