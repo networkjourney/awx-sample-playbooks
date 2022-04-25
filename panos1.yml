@@ -5,8 +5,8 @@
 #  gather_facts: false
 #  connection: local
 
-#  collections:
-#    - paloaltonetworks.panos
+  collections:
+    - paloaltonetworks.panos
 
   #vars:
    # palo_provider:
