@@ -10,7 +10,7 @@
 
   vars:
     palo_provider:
-    api_key: ddddd
+      api_key: ddddd
 
   tasks:
    - name: Add test rule 1 to the firewall
