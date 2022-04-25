@@ -8,14 +8,14 @@
   collections:
     - paloaltonetworks.panos
 
-  #vars:
-   # palo_provider:
-   #   
+  vars:
+    palo_provider:
+    api_key: ddddd
 
   tasks:
    - name: Add test rule 1 to the firewall
      panos_security_rule:
-      #provider: '{{ palo_provider }}'
+      provider: '{{ palo_provider }}'
       ip_address: '{{ ansible_host }}'
       rule_name: 'Ansible test 1'
       description: 'An Ansible test rule'
