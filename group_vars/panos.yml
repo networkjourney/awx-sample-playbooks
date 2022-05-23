@@ -1,0 +1,19 @@
+---
+
+configs_dir: ./configs/
+
+palo_provider:
+  api_key: LUFRPT1WblNwQWQ1RmRBdGdMaFgvTDViT3lNLytlM2M9b0FHUmtNbXZzY0VNMTZrU3JHeGpUdEpoRGFjS3dXWVdjbE9uQmMrR3BLQjNkUE9QRWdiTWRkRnB5Z3FuRUt2MQ==
+  ip_address: "{{ ansible_host }}"
+
+adminusername: tonyandabhi-apikey
+adminpassword: Networkjourney@123
+
+ansible_ssh_user: root
+ansible_ssh_pass: Networkjourney@123
+
+dns_primary_ip: "107.107.107.107"
+dns_secondary_ip: "103.103.103.103"
+ntp_server_primary_ip: "67.67.67.67"
+ntp_server_secondary_ip: "77.77.77.77"
+
