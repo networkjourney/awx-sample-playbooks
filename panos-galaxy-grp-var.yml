@@ -1,0 +1,33 @@
+---
+- name: to set DNS, NTP, INTERFACE
+  hosts: panos
+  connection: local
+  
+  collections:
+   - paloaltonetworks.panos
+    
+  vars:
+   panosadelanddeep_provider:
+     api_key: LUFRPT12Y1BsVDlxT2FiWjNySzBacTFobzlxaXJ4TFE9b0FHUmtNbXZzY0VNMTZrU3JHeGpUdEpoRGFjS3dXWVdjbE9uQmMrR3BLQ1JoR0d3bFQ0RzFxeGR3SGN5bDl3ZQ==
+     ip_address: "{{ ansible_host }}"
+     
+  tasks:
+   - name: set dns and primary
+     panos_mgtconfig:
+      provider: "{{ panosadelanddeep_provider }}"
+      dns_server_primary: "{{ dns_primary_ip123 }}"
+      dns_server_secondary: "{{ dns_secondary_ip123 }}"    
+      commit: false
+      
+   - name: set backup user and password
+     panos_administrator:
+      provider: "{{ panosadelanddeep_provider }}"
+      admin_username: "{{ backupadmin123 }}"
+      admin_password: "{{ backuppassword123 }}"    
+      superuser: true
+      commit: false
+      
+   - name: commit all at once under host category panosadelanddeep
+     panos_commit_firewall:
+        provider: "{{ panosadelanddeep_provider }}"
+...
