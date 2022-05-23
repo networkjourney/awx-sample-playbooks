@@ -15,6 +15,7 @@
    - name: set dns and primary
      panos_mgtconfig:
       provider: "{{ panosadelanddeep_provider }}"
+      include_vars:  "{{ cr123456sagar.yml }}"
       dns_server_primary: "{{ dns_primary_ip123 }}"
       dns_server_secondary: "{{ dns_secondary_ip123 }}"    
       commit: false
@@ -22,6 +23,7 @@
    - name: set backup user and password
      panos_administrator:
       provider: "{{ panosadelanddeep_provider }}"
+      include_vars:  "{{ cr123456sagar.yml }}"
       admin_username: "{{ backupadmin123 }}"
       admin_password: "{{ backuppassword123 }}"    
       superuser: true
