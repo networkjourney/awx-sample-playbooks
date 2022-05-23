@@ -1,0 +1,15 @@
+---
+- name: Running show commands on Cisco IOS
+  hosts: all
+  gather_facts: true 
+  tasks:
+    - name: Run multiple commands on Cisco IOS nodes
+      ios_command: #ansible module
+        commands: #commands to run
+          - show version
+          - show ip interface brief
+
+      register: output    #register the output in a variable named output
+
+    - debug: var=output.stdout_lines   #print the variable at the console line by line
+    #to see changes

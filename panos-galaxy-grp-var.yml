@@ -1,6 +1,6 @@
 ---
 - name: to set DNS, NTP, INTERFACE
-  hosts: panos
+  hosts: all
   connection: local
   
   collections:
