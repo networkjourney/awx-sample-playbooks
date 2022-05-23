@@ -11,6 +11,7 @@
      api_key: LUFRPT12Y1BsVDlxT2FiWjNySzBacTFobzlxaXJ4TFE9b0FHUmtNbXZzY0VNMTZrU3JHeGpUdEpoRGFjS3dXWVdjbE9uQmMrR3BLQ1JoR0d3bFQ0RzFxeGR3SGN5bDl3ZQ==
      ip_address: "{{ ansible_host }}"
      
+  vars_files: cr123456sagar.yml
 
      
   tasks:
