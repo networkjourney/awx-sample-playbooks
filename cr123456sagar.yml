@@ -1,0 +1,7 @@
+---
+dns_primary_ip123: "107.107.107.107"
+dns_secondary_ip123: "103.103.103.103"
+ntp_server_primary_ip123: "67.67.67.67"
+ntp_server_secondary_ip123: "77.77.77.77"
+backupadmin123: "tonyandabhi-apikey"
+backuppassword123: "passtesting@1234"
