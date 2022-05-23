@@ -10,12 +10,15 @@
    panosadelanddeep_provider:
      api_key: LUFRPT12Y1BsVDlxT2FiWjNySzBacTFobzlxaXJ4TFE9b0FHUmtNbXZzY0VNMTZrU3JHeGpUdEpoRGFjS3dXWVdjbE9uQmMrR3BLQ1JoR0d3bFQ0RzFxeGR3SGN5bDl3ZQ==
      ip_address: "{{ ansible_host }}"
+     favcolor: blue
+  vars_files:
+    - /awx-sample-playbooks/cr123456sagar.yml
      
   tasks:
    - name: set dns and primary
      panos_mgtconfig:
       provider: "{{ panosadelanddeep_provider }}"
-      include_vars:  "cr123456sagar.yml"
+      include_vars:  "/awx-sample-playbooks/cr123456sagar.yml"
       dns_server_primary: "{{ dns_primary_ip123 }}"
       dns_server_secondary: "{{ dns_secondary_ip123 }}"    
       commit: false
@@ -23,7 +26,7 @@
    - name: set backup user and password
      panos_administrator:
       provider: "{{ panosadelanddeep_provider }}"
-      include_vars:  "cr123456sagar.yml"
+      include_vars:  "/awx-sample-playbooks/cr123456sagar.yml"
       admin_username: "{{ backupadmin123 }}"
       admin_password: "{{ backuppassword123 }}"    
       superuser: true
